@@ -1,0 +1,36 @@
+.header {
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+
+  @include media-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.link-phone {
+  display: flex;
+  align-items: center;
+  > a {
+    font-weight: bold;
+  }
+}
+.link-instagram {
+  display: flex;
+  justify-content: end;
+}
+.footer {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+  }
+  &__instagram-link {
+    margin: 0 12px 0 0;
+  }
+  @include media-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,95 +1,88 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import logo from "../assets/images/logo.png";
+import mainSlide from "../assets/images/main-slide.jpg";
+import material from "../assets/images/material.jpg";
+import different from "../assets/images/different.jpg";
+import colors from "../assets/images/colors.jpg";
+import styles from "./page.module.scss";
+import clsx from "clsx";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <main className={clsx("container section", styles.breand)}>
+        <div>
+          <Image src={logo} alt="InCore" />
+          <div className={styles["breand__text"]}>
+            <h1>Кожаные изделия ручной работы</h1>
+            <p className={styles["breand__intro"]}>
+              искусство и комфорт в одном
+            </p>
+          </div>
+          <Link href="/" className="link-button">
+            Заказать
+          </Link>
+        </div>
+        <div className={styles["breand__image-wrapper"]}>
+          <Image
+            src={mainSlide}
+            alt="Кожанные изделия"
+            className={styles["breand__image"]}
+          />
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className="container section">
+        <div className="title">Почему именно мы?</div>
+        <div className="title">Почему натуральная кожа?</div>
+        <div className={styles.advantages}>
+          <article className={styles["advantages__item"]}>
+            <Image
+              src={material}
+              alt="Долговечный материал"
+              className={styles["advantages__image"]}
+            />
+            <div className={styles["advantages__wrapper"]}>
+              <h2 className={styles["advantages__title"]}>Материал</h2>
+              <p>
+                Натуральная кожа — это прочный, долговечный и красивый материал,
+                получаемый из шкур животных. Обладает естественной красотой,
+                уникальностью и комфортом. Устойчива к истиранию и экологична.
+              </p>
+            </div>
+          </article>
+          <article className={styles["advantages__item"]}>
+            <Image
+              src={different}
+              alt="Фурнитура"
+              className={styles["advantages__image"]}
+            />
+            <div className={styles["advantages__wrapper"]}>
+              <h2 className={styles["advantages__title"]}>Фурнитура</h2>
+              <p>
+                Высококачественная фурнитура премиум-класса, отличается
+                прочностью, долговечностью и надёжностью. Она проходят
+                многоуровневый контроль качества, благодаря чему изделия с такой
+                фурнитурой служат дольше и не подводят даже в сложных условиях.
+              </p>
+            </div>
+          </article>
+          <article className={styles["advantages__item"]}>
+            <Image
+              src={colors}
+              alt="Расцветка"
+              className={styles["advantages__image"]}
+            />
+            <div className={styles["advantages__wrapper"]}>
+              <h2 className={styles["advantages__title"]}>Расцветка</h2>
+              <p>
+                Любое изделие INCORE можно заказать в индивидуальных размерах и
+                в разных цветах, которые комбинируется на выбор покупателя.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </>
   );
 }
