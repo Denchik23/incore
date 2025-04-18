@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <main className={clsx("container section", styles.breand)}>
         <div>
-          <Image src={logo} alt="InCore" />
+          <Image src={logo} alt="InCore" width={190} height={190} />
           <div className={styles["breand__text"]}>
             <h1>Кожаные изделия ручной работы</h1>
             <p className={styles["breand__intro"]}>
