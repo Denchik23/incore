@@ -7,6 +7,9 @@ import colors from "../assets/images/colors.jpg";
 import styles from "./page.module.scss";
 import clsx from "clsx";
 import Link from "next/link";
+import data from "../assets/product-data.json";
+import { ProductCard } from "@/components/product/productCard";
+import type { ProductType } from "@/types/productType";
 
 export default function Home() {
   return (
@@ -20,8 +23,8 @@ export default function Home() {
               искусство и комфорт в одном
             </p>
           </div>
-          <Link href="/" className="link-button">
-            Заказать
+          <Link href="/catalog" className="button">
+            Каталог
           </Link>
         </div>
         <div className={styles["breand__image-wrapper"]}>
@@ -81,6 +84,14 @@ export default function Home() {
               </p>
             </div>
           </article>
+        </div>
+      </div>
+      <div className="container section">
+        <div className="title">Что можно заказать?</div>
+        <div className="products">
+          {data.map((product: ProductType, index: number) => (
+            <ProductCard key={index} product={product} />
+          ))}
         </div>
       </div>
     </>

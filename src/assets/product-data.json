@@ -1,0 +1,78 @@
+[
+  {
+    "link": "card-holder",
+    "title": "Картхолдер из натуральной кожи",
+    "description": "Картхолдер из натуральной кожи Картхолдер из натуральной кожи Картхолдер из натуральной кожи",
+    "image": {
+      "src": "card-holder.jpg",
+      "width": 1239,
+      "height": 966
+    },
+    "colors": ["green", "blue"],
+    "price": 3899,
+    "characteristics": [
+      { "name": "Цвет","value": "7 цветов на выбор"},
+      { "name": "Размер","value": "10*8 см."},
+      { "name": "Вес","value": "25гр"},
+      { "name": "Материал","value": "Кожа КРС, вощеная нить, металическая фурнитура"}
+    ],
+    "gallery": ["card-holder_08.jpg", "card-holder_09.jpg", "card-holder_19.jpg", "card-holder_30.jpg"]
+  },
+  {
+    "link": "portmone",
+    "title": "Кошелек",
+    "description": "Кошелек",
+    "image": {
+      "src": "card-holder.jpg",
+      "width": 1239,
+      "height": 966
+    },
+    "colors": ["red", "blue"],
+    "price": 4569,
+    "characteristics": [
+      { "name": "Цвет","value": "7 цветов на выбор"},
+      { "name": "Размер","value": "10*8 см."},
+      { "name": "Вес","value": "25гр"},
+      { "name": "Материал","value": "Кожа КРС, вощеная нить, металическая фурнитура"}
+    ],
+    "gallery": ["card-holder_08.jpg", "card-holder_09.jpg", "card-holder_19.jpg", "card-holder_30.jpg"]
+  },
+  {
+    "link": "bags",
+    "title": "Женская сумка",
+    "description": "Женская сумка",
+    "image": {
+      "src": "card-holder.jpg",
+      "width": 1239,
+      "height": 966
+    },
+    "colors": ["green", "blue"],
+    "price": 8699,
+    "characteristics": [
+      { "name": "Цвет","value": "7 цветов на выбор"},
+      { "name": "Размер","value": "10*8 см."},
+      { "name": "Вес","value": "25гр"},
+      { "name": "Материал","value": "Кожа КРС, вощеная нить, металическая фурнитура"}
+    ],
+    "gallery": ["card-holder_08.jpg", "card-holder_09.jpg", "card-holder_19.jpg", "card-holder_30.jpg"]
+  },
+  {
+    "link": "backpack",
+    "title": "Рюкзак",
+    "description": "Рюкзак",
+    "image": {
+      "src": "card-holder.jpg",
+      "width": 1239,
+      "height": 966
+    },
+    "colors": ["green", "blue"],
+    "price": 13899,
+    "characteristics": [
+      { "name": "Цвет","value": "7 цветов на выбор"},
+      { "name": "Размер","value": "10*8 см."},
+      { "name": "Вес","value": "25гр"},
+      { "name": "Материал","value": "Кожа КРС, вощеная нить, металическая фурнитура"}
+    ],
+    "gallery": ["card-holder_08.jpg", "card-holder_09.jpg", "card-holder_19.jpg", "card-holder_30.jpg"]
+  }
+]

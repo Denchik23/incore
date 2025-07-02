@@ -24,6 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.5;
   margin: 0;
   min-width: 380px;
   position: relative;
@@ -62,19 +63,32 @@ footer {
   background-color: #d4c38f;
   padding: 4rem 0 4rem 0;
 }
-.link-button {
+.button {
   color: #fff;
   background-color: #d4c38f;
   border-radius: 10px;
   display: inline-block;
   font-weight: bold;
-  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.2s linear;
+  border: none;
   &:hover {
     background-color: #bfb081;
+  }
+  &_width {
+    width: 100%;
+  }
+  &_big {
+    padding: 1rem;
+  }
+  @include media-laptop {
+    &_width {
+      width: auto;
+    }
   }
 }
 .section {
@@ -100,4 +114,73 @@ footer {
   font-size: 1.5rem;
   text-align: center;
   font-weight: 400;
+}
+.products {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+
+  @include media-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-laptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.bread-crumbs {
+  display: flex;
+  margin: 0 0 2rem 0;
+  &__link {
+    text-decoration: underline;
+  }
+  &__separator {
+    margin: 0 0.5rem;
+  }
+}
+.colors {
+  padding: 0;
+  display: flex;
+  margin: 0 0 1rem 0;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  &__item {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: brown;
+  }
+  &_red {
+    background-color: red;
+  }
+  &_green {
+    background-color: green;
+  }
+  &_blue {
+    background-color: blue;
+  }
+}
+.detail-section {
+  display: grid;
+  grid-gap: 3rem;
+
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.detail-product {
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__price {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  &__description {
+    margin: 2rem 0 0 0;
+  }
 }
